@@ -10,15 +10,28 @@
  */
 
 import React from 'react';
-import CssBaseline from 'material-ui/CssBaseline';
-import Header from '../Header/index';
+import Introduction from '../Introduction/index';
+import AboutUs from '../AboutUsMini';
+import Process from '../Process';
+import ConnectUs from '../ConnectUs';
+import ScrollToTop from '../ScrollToTop';
 
-export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+const styles = {
+  root: {
+    backgroundColor: 'white',
+  },
+};
+
+export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+
   render() {
     return (
-      <div>
-        <CssBaseline />
-        <Header />
+      <div style={styles.root}>
+        <ScrollToTop />
+        <Introduction />
+        <AboutUs />
+        <Process />
+        <ConnectUs title="Connect with TradesCo" description="Find out how TradesCo can help your business by connecting with us now." />
       </div>
     );
   }
