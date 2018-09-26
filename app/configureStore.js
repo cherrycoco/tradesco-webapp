@@ -37,6 +37,7 @@ export default function configureStore(initialState = {}, history) {
       : compose;
   /* eslint-enable */
 
+
   const store = createStore(
     createReducer(),
     fromJS(initialState),
